@@ -13,6 +13,8 @@
 		18282F7F209F341300F1F932 /* OpenVPNConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18282F7D209F341300F1F932 /* OpenVPNConnect.xcdatamodeld */; };
 		18282F81209F341400F1F932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18282F80209F341400F1F932 /* Assets.xcassets */; };
 		18282F84209F341400F1F932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18282F82209F341400F1F932 /* LaunchScreen.storyboard */; };
+		18E9CB1D209F35A2007CE106 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */; };
+		18E9CB1E209F35A2007CE106 /* OpenVPNAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		18282F80209F341400F1F932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18282F83209F341400F1F932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18282F85209F341400F1F932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenVPNAdapter.framework; path = Carthage/Build/iOS/OpenVPNAdapter.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E9CB1D209F35A2007CE106 /* KeychainAccess.framework in Frameworks */,
+				18E9CB1E209F35A2007CE106 /* OpenVPNAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				18282F75209F341300F1F932 /* OpenVPNConnect */,
 				18282F74209F341300F1F932 /* Products */,
+				18E9CB1A209F35A1007CE106 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,15 @@
 			path = OpenVPNConnect;
 			sourceTree = "<group>";
 		};
+		18E9CB1A209F35A1007CE106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */,
+				18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +93,7 @@
 				18282F6F209F341300F1F932 /* Sources */,
 				18282F70209F341300F1F932 /* Frameworks */,
 				18282F71209F341300F1F932 /* Resources */,
+				18E9CB1F209F35AA007CE106 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,6 +149,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18E9CB1F209F35AA007CE106 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OpenVPNAdapter.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18282F6F209F341300F1F932 /* Sources */ = {
@@ -285,6 +320,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OpenVPNConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +341,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OpenVPNConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
