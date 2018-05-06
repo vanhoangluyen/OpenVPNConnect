@@ -15,6 +15,7 @@
 		18282F84209F341400F1F932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18282F82209F341400F1F932 /* LaunchScreen.storyboard */; };
 		18E9CB1D209F35A2007CE106 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */; };
 		18E9CB1E209F35A2007CE106 /* OpenVPNAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */; };
+		18E9CB22209F3862007CE106 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB21209F3862007CE106 /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		18282F85209F341400F1F932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenVPNAdapter.framework; path = Carthage/Build/iOS/OpenVPNAdapter.framework; sourceTree = "<group>"; };
+		18E9CB20209F3854007CE106 /* OpenVPNConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenVPNConnect.entitlements; sourceTree = "<group>"; };
+		18E9CB21209F3862007CE106 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E9CB1D209F35A2007CE106 /* KeychainAccess.framework in Frameworks */,
+				18E9CB22209F3862007CE106 /* NetworkExtension.framework in Frameworks */,
 				18E9CB1E209F35A2007CE106 /* OpenVPNAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +67,7 @@
 		18282F75209F341300F1F932 /* OpenVPNConnect */ = {
 			isa = PBXGroup;
 			children = (
+				18E9CB20209F3854007CE106 /* OpenVPNConnect.entitlements */,
 				18282F76209F341300F1F932 /* AppDelegate.swift */,
 				18282F78209F341300F1F932 /* ViewController.swift */,
 				18282F7A209F341300F1F932 /* Main.storyboard */,
@@ -77,6 +82,7 @@
 		18E9CB1A209F35A1007CE106 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18E9CB21209F3862007CE106 /* NetworkExtension.framework */,
 				18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */,
 				18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */,
 			);
@@ -116,6 +122,17 @@
 				TargetAttributes = {
 					18282F72209F341300F1F932 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -319,7 +336,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OpenVPNConnect/OpenVPNConnect.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56AJJ634ZU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -340,7 +359,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OpenVPNConnect/OpenVPNConnect.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56AJJ634ZU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
