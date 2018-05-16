@@ -14,6 +14,7 @@
 		18282F81209F341400F1F932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18282F80209F341400F1F932 /* Assets.xcassets */; };
 		18282F84209F341400F1F932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18282F82209F341400F1F932 /* LaunchScreen.storyboard */; };
 		1833318820A488F600152689 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833318720A488F500152689 /* PacketTunnelProvider.swift */; };
+		1834579C20AADD5700EF30C4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1834579B20AADD5700EF30C4 /* Regex.swift */; };
 		18B777FA20A5384A005AB1B8 /* client.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 18B777F920A5384A005AB1B8 /* client.ovpn */; };
 		18B777FC20A539BD005AB1B8 /* OpenVPNManagerConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B777FB20A539BD005AB1B8 /* OpenVPNManagerConnect.swift */; };
 		18D66F3920A4949C00F67A37 /* OpenVPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D66F3820A4949C00F67A37 /* OpenVPNManager.swift */; };
@@ -32,6 +33,7 @@
 		18282F83209F341400F1F932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18282F85209F341400F1F932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1833318720A488F500152689 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		1834579B20AADD5700EF30C4 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		18B777F920A5384A005AB1B8 /* client.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = client.ovpn; sourceTree = "<group>"; };
 		18B777FB20A539BD005AB1B8 /* OpenVPNManagerConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVPNManagerConnect.swift; sourceTree = "<group>"; };
 		18D66F3820A4949C00F67A37 /* OpenVPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVPNManager.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				1833318720A488F500152689 /* PacketTunnelProvider.swift */,
 				18D66F3820A4949C00F67A37 /* OpenVPNManager.swift */,
 				18B777FB20A539BD005AB1B8 /* OpenVPNManagerConnect.swift */,
+				1834579B20AADD5700EF30C4 /* Regex.swift */,
 				18282F7A209F341300F1F932 /* Main.storyboard */,
 				18282F80209F341400F1F932 /* Assets.xcassets */,
 				18282F82209F341400F1F932 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 				18282F79209F341300F1F932 /* ViewController.swift in Sources */,
 				18282F7F209F341300F1F932 /* OpenVPNConnect.xcdatamodeld in Sources */,
 				18D66F3920A4949C00F67A37 /* OpenVPNManager.swift in Sources */,
+				1834579C20AADD5700EF30C4 /* Regex.swift in Sources */,
 				18B777FC20A539BD005AB1B8 /* OpenVPNManagerConnect.swift in Sources */,
 				1833318820A488F600152689 /* PacketTunnelProvider.swift in Sources */,
 				18282F77209F341300F1F932 /* AppDelegate.swift in Sources */,

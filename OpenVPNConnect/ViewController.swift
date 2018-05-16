@@ -14,11 +14,43 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        configure()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func configure() {
+        if let filepath = Bundle.main.url(forResource: "client", withExtension: "ovpn") {
+            do {
+                let contents = try String(contentsOf: filepath)
+                if let st = Regex.pregMatchFirst(contents, regex: "1(.*?)\n") {
+                    let smth = st.replacingOccurrences(of: "\n", with: "")
+                    if let index = (smth.range(of: " ")?.upperBound) {
+                        let port = String(smth.suffix(from: index))
+                        print(port)
+                    }
+                    if let index = (smth.range(of: " ")?.lowerBound) {
+                        let ip = String(smth.prefix(upTo: index))
+                        print(ip)
+                    }
+                }
+                
+                let st4 = try Regex.decodeContents(for: contents)
+                
+                if let privateKey = Regex.pregMatchFirst(st4, regex: "-----BEGINPRIVATEKEY-----(.*?)-----ENDPRIVATEKEY-----") {
+                    print(privateKey)
+                }
+                
+                if let st = Regex.pregMatchFirst(st4, regex: "Modulus:(.*?)Exponent") {
+                    let publicKey = st.replacingOccurrences(of: "Modulus:", with: "").replacingOccurrences(of: "Exponent", with: "")
+                    print(publicKey)
+                }
+            } catch {
+                // contents could not be loaded (.+?)([123]*)(.*)
+            }
+        }
     }
 
     @IBAction func connectToOpenVPNServer( _ sender : UIButton) {
