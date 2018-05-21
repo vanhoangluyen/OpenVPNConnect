@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18282F77209F341300F1F932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18282F76209F341300F1F932 /* AppDelegate.swift */; };
-		18282F79209F341300F1F932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18282F78209F341300F1F932 /* ViewController.swift */; };
+		18282F79209F341300F1F932 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18282F78209F341300F1F932 /* HomeViewController.swift */; };
 		18282F7C209F341300F1F932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18282F7A209F341300F1F932 /* Main.storyboard */; };
 		18282F7F209F341300F1F932 /* OpenVPNConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18282F7D209F341300F1F932 /* OpenVPNConnect.xcdatamodeld */; };
 		18282F81209F341400F1F932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18282F80209F341400F1F932 /* Assets.xcassets */; };
@@ -18,6 +18,12 @@
 		18B777FA20A5384A005AB1B8 /* client.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 18B777F920A5384A005AB1B8 /* client.ovpn */; };
 		18B777FC20A539BD005AB1B8 /* OpenVPNManagerConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B777FB20A539BD005AB1B8 /* OpenVPNManagerConnect.swift */; };
 		18D66F3920A4949C00F67A37 /* OpenVPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D66F3820A4949C00F67A37 /* OpenVPNManager.swift */; };
+		18E4820120B26B3E00E6C85B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4820020B26B3E00E6C85B /* MainViewController.swift */; };
+		18E4820420B26B6700E6C85B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4820320B26B6700E6C85B /* UIView+Extension.swift */; };
+		18E4820620B26B6D00E6C85B /* ImageView+gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4820520B26B6D00E6C85B /* ImageView+gif.swift */; };
+		18E4820820B26B7400E6C85B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4820720B26B7400E6C85B /* NotificationKey.swift */; };
+		18E4820A20B26B8F00E6C85B /* earth.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18E4820920B26B8F00E6C85B /* earth.gif */; };
+		18E4820C20B26B9600E6C85B /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18E4820B20B26B9600E6C85B /* loading.gif */; };
 		18E9CB1D209F35A2007CE106 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */; };
 		18E9CB1E209F35A2007CE106 /* OpenVPNAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */; };
 		18E9CB22209F3862007CE106 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9CB21209F3862007CE106 /* NetworkExtension.framework */; };
@@ -26,7 +32,7 @@
 /* Begin PBXFileReference section */
 		18282F73209F341300F1F932 /* OpenVPNConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenVPNConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18282F76209F341300F1F932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18282F78209F341300F1F932 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18282F78209F341300F1F932 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18282F7B209F341300F1F932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18282F7E209F341300F1F932 /* OpenVPNConnect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenVPNConnect.xcdatamodel; sourceTree = "<group>"; };
 		18282F80209F341400F1F932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +43,12 @@
 		18B777F920A5384A005AB1B8 /* client.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = client.ovpn; sourceTree = "<group>"; };
 		18B777FB20A539BD005AB1B8 /* OpenVPNManagerConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVPNManagerConnect.swift; sourceTree = "<group>"; };
 		18D66F3820A4949C00F67A37 /* OpenVPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVPNManager.swift; sourceTree = "<group>"; };
+		18E4820020B26B3E00E6C85B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		18E4820320B26B6700E6C85B /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		18E4820520B26B6D00E6C85B /* ImageView+gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+gif.swift"; sourceTree = "<group>"; };
+		18E4820720B26B7400E6C85B /* NotificationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
+		18E4820920B26B8F00E6C85B /* earth.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = earth.gif; sourceTree = "<group>"; };
+		18E4820B20B26B9600E6C85B /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		18E9CB1B209F35A2007CE106 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		18E9CB1C209F35A2007CE106 /* OpenVPNAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenVPNAdapter.framework; path = Carthage/Build/iOS/OpenVPNAdapter.framework; sourceTree = "<group>"; };
 		18E9CB20209F3854007CE106 /* OpenVPNConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenVPNConnect.entitlements; sourceTree = "<group>"; };
@@ -79,19 +91,49 @@
 			children = (
 				18E9CB20209F3854007CE106 /* OpenVPNConnect.entitlements */,
 				18282F76209F341300F1F932 /* AppDelegate.swift */,
-				18282F78209F341300F1F932 /* ViewController.swift */,
-				1833318720A488F500152689 /* PacketTunnelProvider.swift */,
-				18D66F3820A4949C00F67A37 /* OpenVPNManager.swift */,
-				18B777FB20A539BD005AB1B8 /* OpenVPNManagerConnect.swift */,
-				1834579B20AADD5700EF30C4 /* Regex.swift */,
 				18282F7A209F341300F1F932 /* Main.storyboard */,
+				18E481FD20B2699300E6C85B /* Controller */,
+				18E481FC20B2697000E6C85B /* Model */,
+				18E4820220B26B5300E6C85B /* Utilities + Extension */,
 				18282F80209F341400F1F932 /* Assets.xcassets */,
+				18E4820920B26B8F00E6C85B /* earth.gif */,
+				18E4820B20B26B9600E6C85B /* loading.gif */,
 				18282F82209F341400F1F932 /* LaunchScreen.storyboard */,
 				18B777F920A5384A005AB1B8 /* client.ovpn */,
 				18282F85209F341400F1F932 /* Info.plist */,
 				18282F7D209F341300F1F932 /* OpenVPNConnect.xcdatamodeld */,
 			);
 			path = OpenVPNConnect;
+			sourceTree = "<group>";
+		};
+		18E481FC20B2697000E6C85B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18B777FB20A539BD005AB1B8 /* OpenVPNManagerConnect.swift */,
+				1833318720A488F500152689 /* PacketTunnelProvider.swift */,
+				18D66F3820A4949C00F67A37 /* OpenVPNManager.swift */,
+				1834579B20AADD5700EF30C4 /* Regex.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18E481FD20B2699300E6C85B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18E4820020B26B3E00E6C85B /* MainViewController.swift */,
+				18282F78209F341300F1F932 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18E4820220B26B5300E6C85B /* Utilities + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				18E4820320B26B6700E6C85B /* UIView+Extension.swift */,
+				18E4820520B26B6D00E6C85B /* ImageView+gif.swift */,
+				18E4820720B26B7400E6C85B /* NotificationKey.swift */,
+			);
+			path = "Utilities + Extension";
 			sourceTree = "<group>";
 		};
 		18E9CB1A209F35A1007CE106 /* Frameworks */ = {
@@ -174,8 +216,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E4820A20B26B8F00E6C85B /* earth.gif in Resources */,
 				18282F84209F341400F1F932 /* LaunchScreen.storyboard in Resources */,
 				18282F81209F341400F1F932 /* Assets.xcassets in Resources */,
+				18E4820C20B26B9600E6C85B /* loading.gif in Resources */,
 				18282F7C209F341300F1F932 /* Main.storyboard in Resources */,
 				18B777FA20A5384A005AB1B8 /* client.ovpn in Resources */,
 			);
@@ -206,12 +250,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18282F79209F341300F1F932 /* ViewController.swift in Sources */,
+				18282F79209F341300F1F932 /* HomeViewController.swift in Sources */,
 				18282F7F209F341300F1F932 /* OpenVPNConnect.xcdatamodeld in Sources */,
 				18D66F3920A4949C00F67A37 /* OpenVPNManager.swift in Sources */,
 				1834579C20AADD5700EF30C4 /* Regex.swift in Sources */,
 				18B777FC20A539BD005AB1B8 /* OpenVPNManagerConnect.swift in Sources */,
+				18E4820620B26B6D00E6C85B /* ImageView+gif.swift in Sources */,
+				18E4820120B26B3E00E6C85B /* MainViewController.swift in Sources */,
+				18E4820820B26B7400E6C85B /* NotificationKey.swift in Sources */,
 				1833318820A488F600152689 /* PacketTunnelProvider.swift in Sources */,
+				18E4820420B26B6700E6C85B /* UIView+Extension.swift in Sources */,
 				18282F77209F341300F1F932 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

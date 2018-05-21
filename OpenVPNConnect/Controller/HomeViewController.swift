@@ -9,14 +9,20 @@
 import UIKit
 import OpenVPNAdapter
 
-class ViewController: UIViewController {
-
+class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var imageVPN: UIImageView!
+    @IBOutlet weak var buttonConnect: UIButton!
+    @IBOutlet weak var loadConnectImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        imageVPN.loadGif(name: "earth")
         configure()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,28 +58,41 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    @IBAction func changeStateSlideMenu(_ sender: UIBarButtonItem) {
+        NotificationCenter.default.post(name: .closeSlideMenu , object: nil )
+    }
+    
     @IBAction func connectToOpenVPNServer( _ sender : UIButton) {
         if OpenVPNManager.shared.isDisconnected {
-
+            loadConnectImageView.loadGif(name: "loading")
             OpenVPNManager.shared.connectWithCertificate { error in
                 let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [unowned self] in
+                if OpenVPNManager.shared.isConnected {
+                    self.buttonConnect.setImage(#imageLiteral(resourceName: "power-on"), for: .normal)
+                    self.loadConnectImageView.image = #imageLiteral(resourceName: "arrow-circle")
+                }
+            }
         } else {
             showAlert(vc: self, title: "Are You DisConnect", message: "")
         }
-//        if OpenVPNManagerConnect.shared.isDisconnected {
-//            OpenVPNManagerConnect.shared.startOpenVPNTunnel()
-//        } else {
-//            OpenVPNManagerConnect.shared.stopOpenVPNTunnel()
-//        }
+        //        if OpenVPNManagerConnect.shared.isDisconnected {
+        //            OpenVPNManagerConnect.shared.startOpenVPNTunnel()
+        //        } else {
+        //            OpenVPNManagerConnect.shared.stopOpenVPNTunnel()
+        //        }
     }
     func showAlert(vc: UIViewController, title:String, message: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "DisConnect", style: .default) { (result : UIAlertAction) -> Void in
             OpenVPNManager.shared.stopOpenVPNTunnel()
+            DispatchQueue.main.async { [unowned self] in
+                self.buttonConnect.setImage(#imageLiteral(resourceName: "power-off"), for: .normal)
+                self.loadConnectImageView.image = nil
+            }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { Void in}
         alertController.addAction(okAction)
