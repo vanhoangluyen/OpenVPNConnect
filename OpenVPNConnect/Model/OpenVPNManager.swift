@@ -20,6 +20,7 @@ class OpenVPNManager: NSObject {
         return instance
     }()
     
+    var ipServerAdress: String?
     var providerManager =  {NETunnelProviderManager.shared()}()
     public var status : NEVPNStatus { get { return providerManager.connection.status }}
     public var isConnected: Bool {
@@ -66,6 +67,7 @@ class OpenVPNManager: NSObject {
         // keychain to store a password.
         //tunnelProtocol.username = "username"
         //tunnelProtocol.passwordReference = "..." // A persistent keychain reference to an item containing the password
+        tunnelProtocol.serverAddress = ipServerAdress
         self.providerManager.localizedDescription = "OpenVPN Client"
         loadProfile { _ in
             // Finish configuration by assigning tunnel protocol to `protocolConfiguration`

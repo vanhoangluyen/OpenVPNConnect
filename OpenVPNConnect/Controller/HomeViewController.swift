@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
                     }
                     if let index = (smth.range(of: " ")?.lowerBound) {
                         let ip = String(smth.prefix(upTo: index))
+                        OpenVPNManager.shared.ipServerAdress = ip
                         print(ip)
                     }
                 }
